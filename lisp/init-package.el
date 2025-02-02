@@ -111,6 +111,15 @@
   :ensure t
   :commands lsp-treemacs-errors-list)
 
+(use-package multiple-cursors
+  :ensure t
+  :bind (("C-S-c C-S-c" . mc/edit-lines)
+         ("C-S-<up>" . mc/edit-beginnings-of-lines)
+         ("C-S-<down>" . mc/edit-ends-of-lines)
+         ("C->" . mc/mark-next-like-this)
+         ("C-<" . mc/mark-previous-like-this)
+         ("C-c C-<" . mc/mark-all-like-this)))
+
 (use-package restart-emacs)
 
 (provide 'init-package)
