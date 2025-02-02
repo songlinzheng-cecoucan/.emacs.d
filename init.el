@@ -10,6 +10,7 @@
 (require 'init-ui)
 (require 'init-package)
 (require 'init-const)
+(require 'init-org)
 
 (when (file-exists-p custom-file)
   (load-file custom-file))
