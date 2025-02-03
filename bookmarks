@@ -4,12 +4,12 @@
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
 (("org-refile-last-stored"
  (filename . "~/org/projects.org")
- (front-context-string . "** TODO Buy digi")
- (rear-context-string . " <2025-02-07 五>\n")
- (position . 1414))
+ (front-context-string . "*** TODO Learn h")
+ (rear-context-string . "02-07 五>\n** LLM\n")
+ (position . 2296))
 ("org-capture-last-stored"
  (filename . "~/org/next_actions.org")
- (front-context-string . "** TODO [Optiona")
- (rear-context-string . "\n* Next Actions\n")
- (position . 148))
+ (front-context-string . "** TODO Reshape\n")
+ (rear-context-string . "ort: 2.0\n :END:\n")
+ (position . 1591))
 )
