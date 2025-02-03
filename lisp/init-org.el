@@ -1,5 +1,8 @@
 (require 'org)
 
+;; 启用 org-indent-mode
+(add-hook 'org-mode-hook 'org-indent-mode)
+
 (setq org-capture-templates
       '(("t" "Todo" entry (file+headline "~/org/inbox.org" "Tasks")
          "* TODO %?\n Added: %U\n :%^{Tags|work|life|urgent}:\n  %i\n")
@@ -10,9 +13,11 @@
         ("s" "Maybe" entry (file+headline "~/org/maybe.org" "Maybe")
          "* SOMEDAY %?\n  %i\n")
 	("j" "Journal" entry (file+datetree "~/org/journal.org")
-         "* %?\nEntered on %U\n  %i\n")
+         "* %? :JOURNAL:\nTime: %U\n  %i\n")
 	("r" "Ref" entry (file+headline "~/org/ref.org" "Ref")
-	 "* %?\nEntered on %U\n %i\n")))
+	 "* %? :REF:\nTime: %U\n %i\n")
+        ("e" "Expenditure" entry (file+datetree "~/org/expenses.org")
+         "* %^{Description} :EXPD:\nAdded: %U AMOUNT: %^{Amount} DETAILS: %^{Details}\n")))
 
 (setq org-refile-targets '((nil :maxlevel . 4)
                            ("~/org/projects.org" :maxlevel . 4)
@@ -21,7 +26,8 @@
                            ("~/org/maybe.org" :maxlevel . 4)
 			   ("~/org/ref.org" :maxlevel . 4)))
 
-(setq org-agenda-files '("~/org"))
+(setq org-agenda-files '(("~/org/next_actions.org")
+			 ("~/org/projects.org")))
 
 ;; (setq org-agenda-use-time-grid t)
 
